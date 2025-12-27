@@ -12,7 +12,7 @@ describe('isIsogram', () => {
       .toBe(true);
   });
 
-  it(`should return true if there's no repeating letters`, () => {
+  it(`should return false if there's no repeating letters`, () => {
     expect(isIsogram('look'))
       .toBe(false);
 
@@ -32,5 +32,16 @@ describe('isIsogram', () => {
 
     expect(isIsogram('bOo'))
       .toBe(false);
+  });
+
+  it(`should return true or a valid isogram`, () => {
+    expect(isIsogram('playgrounds'))
+      .toBe(true);
+
+    expect(isIsogram('isogram'))
+      .toBe(true);
+
+    expect(isIsogram('false'))
+      .toBe(true);
   });
 });
